@@ -7,7 +7,7 @@ describe('AT', async () => {
     const cwtPayload = await unpackAndVerify(HC1);
     expect(cwtPayload).not.to.be.null;
     expect(cwtPayload).not.to.be.undefined;
-    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Musterfrau-Gößinger', 'fnt': 'MUSTERFRAU<GOESSINGER', 'gn': 'Gabriele', 'gnt': 'GABRIELE'}, 'dob': '1998-02-26', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18', 'co': 'AT', 'is': 'BMSGPK Austria', 'ci': 'urn:uvci:01:AT:10807843F94AEE0EE5093FBC254BD813P'}]});
+    expect(await parseCWT(cwtPayload)).to.eql({'ver': '1.0.0', 'nam': {'fn': 'Gößinger', 'fnt': 'GOESSINGER', 'gn': 'Gabriele', 'gnt': 'GABRIELE'}, 'dob': '1969-02-26', 'v': [{'tg': '840539006', 'vp': '1119305005', 'mp': 'EU/1/20/1528', 'ma': 'ORG-100030215', 'dn': 1, 'sd': 2, 'dt': '2021-02-18', 'co': 'AT', 'is': 'BMSGPK Austria', 'ci': 'urn:uvci:01:AT:10807843F94AEE0EE5093FBC254BD813P'}]});
   });
 
   it('should verify AT_2DCode_raw_2', async () => {
